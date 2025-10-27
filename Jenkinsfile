@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    options {
-        cleanWs()
-    }
-
     triggers {
         pollSCM('H/1 * * * *')
     }
@@ -15,6 +11,12 @@ pipeline {
 
 
     stages {
+
+        stage('Cleanup') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Build') {
             steps {
                 sh 'dotnet build'
