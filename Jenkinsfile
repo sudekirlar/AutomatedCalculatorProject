@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    options {
+        cleanWs()
+    }
+
     triggers {
         pollSCM('H/1 * * * *')
     }
