@@ -19,13 +19,13 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'dotnet build'
+                sh 'dotnet build Calculator.sln'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'dotnet test'
+                sh 'dotnet test Calculator.sln'
             }
         }
     }
