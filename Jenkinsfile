@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    options {
+        skipDefaultCheckout(true)
+    }
+
     triggers {
         pollSCM('H/1 * * * *')
     }
@@ -9,14 +13,14 @@ pipeline {
         PATH = "${tool 'dotnetsdk-8.0'}:${env.PATH}"
     }
 
-
     stages {
-
-        stage('Cleanup') {
+        stage('Checkout') {
             steps {
-                cleanWs()
+                cleanWs()     
+                checkout scm
             }
         }
+
         stage('Build') {
             steps {
                 sh 'dotnet build Calculator.sln'
