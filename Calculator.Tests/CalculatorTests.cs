@@ -43,6 +43,7 @@ namespace Project.Calculator.Tests
         [TestCase(10, 0, 0, TestName = "Multiply_ByZero")]
         [TestCase(-5, -4, 20, TestName = "Multiply_WithNegative")]
         [TestCase(2.5, 2, 5, TestName = "Multiply_DecimalNumbers")]
+        [TestCase(2, -4, -8, TestName = "Multiply_ResultMustNegative")]
         public void Should_GiveRightAnswer_When_MultiplyTwoNumbers(double a, double b, double expectedResult)
         {
             // Arrange
