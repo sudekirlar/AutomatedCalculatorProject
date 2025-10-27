@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        PATH = "${tool 'dotnetsdk-6.0'}/bin:${env.PATH}"
+        PATH = "${tool 'dotnetsdk-8.0'}/bin:${env.PATH}"
     }
 
 
