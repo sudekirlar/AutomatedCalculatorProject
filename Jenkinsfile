@@ -5,9 +5,10 @@ pipeline {
         pollSCM('H/1 * * * *')
     }
 
-    tools {
-        sdk 'dotnetsdk-6.0'
+    environment {
+        PATH = "${tool 'dotnetsdk-6.0'}/bin:${env.PATH}"
     }
+
 
     stages {
         stage('Build') {
