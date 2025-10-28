@@ -100,8 +100,8 @@ It provides a cloud-based CI alternative to the Jenkins pipeline.
 
 ## Build Status
 
-* **Jenkins:** Local instance (no public badge available)
-* **GitHub Actions:**
+* **Jenkins:** Local instance
+* **GitHub Actions**
 
 ---
 
