@@ -59,6 +59,7 @@ namespace Project.Calculator.Tests
         [TestCase(10, 2, 5, TestName = "Divide_PositiveNumbers")]
         [TestCase(10, 4, 2.5, TestName = "Divide_ResultMustDecimal")]
         [TestCase(-10, -2, 5, TestName = "Divide_NegativeNumbers")]
+        [TestCase(0, 5, 0, TestName = "Divide_EqualsZero")]
         public void Should_GiveRightAnswer_When_DivideTwoNumbers(double a, double b, double expectedResult)
         {
             // Arrange
